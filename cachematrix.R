@@ -11,7 +11,7 @@ makeCacheMatrix <- function(x = matrix()) {
         mMat <- NULL
         invMat <- NULL
         
-        set <- function(x) { mMat <<- x }
+        set <- function(y) { mMat <<- y }
         get <- function() { mMat }
         
         setInvMat <- function(im) { invMat <<- im }
@@ -25,7 +25,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## If matrix x has a inversed_matrix, the function returns it
 ## Otherwise get original_matrix, inverse it, set it to CasheMatrix, then return it
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(x) {
         ## Return a matrix that is the inverse of 'x'
         
         invMat <- x$getInvMat()
